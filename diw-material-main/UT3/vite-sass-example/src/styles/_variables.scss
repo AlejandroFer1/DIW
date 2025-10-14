@@ -1,0 +1,10 @@
+$default-bg-color: red;
+$medium-size-bg-color: rgb(106, 45, 97);
+$large-size-bg-color: rgb(151, 40, 155);
+$narrow-size-bg-color: green;
+
+$breakpoints: (
+  "large": "max-width: 1200px",
+  "medium": "max-width: 1000px",
+  "narrow": "max-width: 800px",
+);

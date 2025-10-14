@@ -1,0 +1,13 @@
+body{
+    background-color: lightgreen;
+}
+h1, h2, h3{
+    color: darkblue;
+    text-align: center;
+}
+.content p{
+    font-size: 18px;
+}
+.important{
+    color: red;
+}

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: Georgia, serif;
+}
+
+.menu {
+    display: flex; 
+    background-color: #dcdcdc; 
+    width: 100%; 
+}
+
+.menu-item {
+    flex: 1; 
+    text-align: center;
+    padding: 15px 0;
+    background-color: #e6e6e6; 
+    border-right: 1px solid #d0d0d0; 
+    border-left: 1px solid #d0d0d0;
+    margin-right: 1px; 
+}
+
+.menu-item:last-child {
+    margin-right: 0;
+}

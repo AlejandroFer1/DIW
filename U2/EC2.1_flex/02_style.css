@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+}
+.nav-tarea2 {
+    background: #118a8a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    height: 27px;
+    min-width: 500px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 8px;
+}
+
+.logo {
+    color: white;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 6px;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+.nav-right {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav-right input[type="text"] {
+    padding: 2px 6px;
+    font-size: 12px;
+    height: 18px;
+}
+
+.nav-right button {
+    background: white;
+    color: #118a8a;
+    border: 1px solid #118a8a;
+    padding: 2px 13px;
+    font-size: 12px;
+    cursor: pointer;
+    height: 22px;
+    border-radius: 4px;
+}

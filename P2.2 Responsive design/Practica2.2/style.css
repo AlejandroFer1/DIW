@@ -1,0 +1,147 @@
+:root {
+    /* --- Colores --- */
+    --color-fondo: gainsboro;
+    --color-texto: #333;
+    --color-item-bg: white;
+    
+    /* --- Tipografía --- */
+    --font-sans: Sans-serif;
+    --font-titulo: 'TituloEspecial', cursive;
+    
+    /* --- Medidas y Espaciado --- */
+    --grid-gap: 10px;
+    --padding-item: 10px;
+    --max-width-desktop: 1400px;
+
+    
+}
+
+@font-face {
+    font-family: 'TituloEspecial';
+    src: url('fonts/fontTitulo3.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--color-fondo); 
+    font-family: var(--font-sans); 
+    color: var(--color-texto);
+}
+
+.grid-container {
+    display: grid;
+    gap: var(--grid-gap);
+    width: 100%;
+    max-width: var(--max-width-desktop);
+    margin: 0 auto;
+}
+
+.grid-item {
+    background-color: var(--color-item-bg);
+    padding: var(--padding-item);
+    overflow: hidden;
+}
+
+.img-block {
+    padding: 0; 
+    cursor: pointer; 
+}
+
+.img-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(0); 
+    transition: filter 0.3s ease-in-out;
+}
+
+.img-block:hover img {
+    filter: grayscale(100%);
+}
+
+.title-block {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text {
+    font-family: var(--font-titulo);
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width:768px) {
+    .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    #block-10 { grid-area: 5 / 1 / 7 / 3; }
+}
+
+.buenas {
+    background-color: transparent;
+}
+
+
+/* TABLET (min-width: 768px) */
+@media (min-width:768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(200px, auto); 
+    }
+
+    /* Columna 1 */
+    #block-1 { grid-area: 1 / 1 / 3 / 2; } /* Pino (2 filas) */
+    #block-4 { grid-area: 3 / 1 / 5 / 2; } /* Golden Gate (2 filas) */
+    #block-9 { grid-area: 3 / 3 / 5 / 3; } /* Globo (2 filas) */
+
+    /* Columna 2 */
+    #block-2 { grid-area: 1 / 2 / 2 / 3; } /* Girasoles */
+    #block-5 { grid-area: 2 / 2 / 3 / 3; } /* Costa rocosa */
+    #block-7 { grid-area: 3 / 2 / 4 / 3; } /* Acantilado */
+    #block-8 { grid-area: 4 / 2 / 5 / 3; } /* Pájaros */
+    #block-11 { grid-area: 6 / 1 / 6 / 3; } /* Hombre en el paisaje */
+    #block-13 { grid-area: 6 / 3 / 6 / 3; } /* Mujer con sombrero */
+
+    /* Columna 3 */
+    #block-3 { grid-area: 1 / 3 / 2 / 4; } /* Texto 1 */
+    #block-6 { grid-area: 2 / 3 / 3 / 4; } /* Texto 2 (Costa rocosa arriba) */
+    #block-10 { grid-area: 5 / 1 / 5 / 3; } /* Buena Suerte (2 filas) */
+    #block-12 { grid-area: 5 / 3 / 6 / 4; } /* Texto 3 (Mujer con sombrero abajo) */
+}
+
+
+/* DESKTOP (min-width: 1024px) */
+@media (min-width:1024px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(300px, auto); 
+    }
+
+    /* Fila 1 */
+    #block-1 { grid-area: 1 / 1 / 3 / 2; } /* Pino (2 filas) */
+    #block-2 { grid-area: 1 / 2 / 2 / 3; } /* Girasoles */
+    #block-3 { grid-area: 1 / 3 / 2 / 4; } /* Texto 1 */
+    #block-4 { grid-area: 1 / 4 / 3 / 5; } /* Golden Gate (2 filas) */
+    #block-5 { grid-area: 1 / 5 / 2 / 6; } /* Costa rocosa */
+
+    /* Fila 2 */
+    #block-6 { grid-area: 2 / 2 / 3 / 3; } /* Texto 2 */
+    #block-7 { grid-area: 2 / 3 / 3 / 4; } /* Acantilado */
+    #block-8 { grid-area: 2 / 5 / 3 / 6; } /* Pájaros */
+
+    /* Fila 3 */
+    #block-9 { grid-area: 3 / 1 / 5 / 3; } /* Globo (2 columnas, 2 filas) */
+    #block-10 { grid-area: 3 / 3 / 4 / 5; } /* Buena Suerte (2 columnas, 1 fila) */
+    #block-12 { grid-area: 3 / 5 / 4 / 6; } /* Texto 3 */
+
+    /* Fila 4 */
+    #block-11 { grid-area: 4 / 3 / 5 / 5; } /* Hombre en el paisaje (2 columnas, 1 fila) */
+    #block-13 { grid-area: 4 / 5 / 5 / 6; } /* Mujer con sombrero */
+}

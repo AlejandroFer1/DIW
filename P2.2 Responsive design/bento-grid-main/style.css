@@ -1,17 +1,12 @@
 :root {
-  /* Colors */
   --purple-100: hsl(254, 88%, 90%);
   --purple-500: hsl(256, 67%, 59%);
   --yellow-100: hsl(31, 66%, 93%);
   --yellow-500: hsl(39, 100%, 71%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 7%);
-
-  /* Font */
   --font-family: 'DM Sans', sans-serif;
   --font-size-body: 18px;
-
-  /* Layout */
   --radius: 20px;
   --padding: 1.5rem;
 }
@@ -25,102 +20,56 @@ body {
   display: flex;
   justify-content: center;
 }
-/* --- ESTILOS BASE (MÓVIL / ANCHOS PEQUEÑOS) --- */
 
 .grid-container {
-    display: grid;
-    /* 1 Columna, ajustada automáticamente (auto-rows para mantener altura) */
-    grid-template-columns: 1fr; 
-    grid-auto-rows: minmax(150px, auto); 
-    gap: 1.5rem;
-    max-width: 600px; /* Limitar el ancho en móvil */
-    margin: 0 auto; /* Centrar el contenedor */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(150px, auto);
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* En móvil, todas las tarjetas ocupan 1 columna, 1 fila. */
 #card-1, #card-2, #card-3, #card-4, 
 #card-5, #card-6, #card-7, #card-8 { 
-    grid-area: auto / auto / auto / auto; 
-    /* grid-area: auto; es suficiente para resetear */
+  grid-area: auto / auto / auto / auto;
 }
-/* --- RESPONSIVE PARA TABLET (min-width: 768px) --- */
+
 @media (min-width: 768px) {
-    .grid-container {
-        /* Usamos 3 columnas */
-        grid-template-columns: repeat(3, 1fr); 
-        max-width: 900px;
-    }
-
-   
-    #card-2 { grid-area: 1 / 1 / 2 / 4; }
-
-    /* Card 1: Create & Schedule (1 col x 2 rows) */
-    #card-1 { grid-area: 2 / 1 / 4 / 2; }
-
-    /* Card 3: Schedule to social media (1 col x 2 rows) */
-    #card-3 { grid-area: 2 / 3 / 4 / 4; }
-
-    /* Card 5: Manage multiple accounts (1 col x 1 row) */
-    #card-5 { grid-area: 2 / 2 / 4 / 3; }
-
-    /* Card 6: Consistent posting (1 col x 1 row) */
-    #card-6 { grid-area: 3 / 2 / 5 / 3; }
-    
-    /* Card 4: Write content using AI (1 col x 2 rows) - Ahora en la parte inferior izquierda */
-    #card-4 { grid-area: 4 / 1 / 6 / 2; }
-    
-    /* Card 8: Grow followers (2 cols x 2 rows) - Espacio grande central */
-    #card-8 { grid-area: 4 / 2 / 6 / 4; }
-
-    
-    /* Card 4: Write content (1 col x 2 rows) */
-    #card-4 { grid-area: 4 / 1 / 6 / 2; } 
-    
-    /* Card 7: >56% growth (1 col x 1 row) */
-    #card-7 { grid-area: 4 / 3 / 5 / 3; }
-
-    /* Card 8: Grow followers (2 cols x 1 row) */
-    #card-8 { grid-area: 5 / 2 / 6 / 4; } 
-}
-
-@media (min-width:1024px) {
   .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1.5fr);
-  gap: 1.5rem;
-  max-width: 1100px;
-  
-}
-    /* --- Posicionamiento con Grid Area --- */
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+  }
 
-/* Card 1: Col 1, Fila 1. Ocupa 1x1 */
-#card-1 { grid-area: 1 / 1 / 2 / 2; }
-
-/* Card 2: Col 2, Fila 1. Ocupa 2 cols (2/4) x 1 row */
-#card-2 { grid-area: 1 / 2 / 1 / 4; }
-
-/* Card 3: Col 4, Fila 1. Ocupa 1 col x 2 rows (1/3) */
-#card-3 { grid-area: 1 / 4 / 3 / 5; }
-
-/* Card 4: Col 1, Fila 2. Ocupa 1 col x 2 rows (2/4) */
-#card-4 { grid-area: 2 / 1 / 4 / 1; }
-
-/* Card 5: Col 2, Fila 2. Ocupa 1x1 */
-#card-5 { grid-area: 2 / 2 / 2 / 3; }
-
-/* Card 6: Col 3, Fila 2. Ocupa 1x1 */
-#card-6 { grid-area: 2 / 3 / 3 / 4; }
-
-/* Card 7: Col 2, Fila 3. Ocupa 1x1 */
-#card-7 { grid-area: 3 / 2 / 3 / 3; }
-
-/* Card 8: Col 3, Fila 3. Ocupa 2 cols (3/5) x 1 row */
-#card-8 { grid-area: 3 / 3 / 3  / 5; }
+  #card-2 { grid-area: 1 / 1 / 2 / 4; }
+  #card-1 { grid-area: 2 / 1 / 4 / 2; }
+  #card-3 { grid-area: 2 / 3 / 4 / 4; }
+  #card-5 { grid-area: 2 / 2 / 4 / 3; }
+  #card-6 { grid-area: 3 / 2 / 5 / 3; }
+  #card-4 { grid-area: 4 / 1 / 6 / 2; }
+  #card-8 { grid-area: 4 / 2 / 6 / 4; }
+  #card-7 { grid-area: 4 / 3 / 5 / 3; }
+  #card-8 { grid-area: 5 / 2 / 6 / 4; } 
 }
 
+@media (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1.5fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+  }
 
+  #card-1 { grid-area: 1 / 1 / 2 / 2; }
+  #card-2 { grid-area: 1 / 2 / 1 / 4; }
+  #card-3 { grid-area: 1 / 4 / 3 / 5; }
+  #card-4 { grid-area: 2 / 1 / 4 / 1; }
+  #card-5 { grid-area: 2 / 2 / 2 / 3; }
+  #card-6 { grid-area: 2 / 3 / 3 / 4; }
+  #card-7 { grid-area: 3 / 2 / 3 / 3; }
+  #card-8 { grid-area: 3 / 3 / 3 / 5; }
+}
 
-/* Cards */
 .card {
   border-radius: var(--radius);
   padding: var(--padding);
@@ -132,20 +81,21 @@ body {
 .yellow-light { background: var(--yellow-100); }
 .yellow-main { background: var(--yellow-500); }
 .purple-light { background: var(--purple-100); }
+
 .purple-main { 
-    background: var(--purple-500); 
-    color: var(--white);
-    
-}
-#card-2{
-      text-align: center;
-    }
-.white { background: var(--white); }
-.white56 { 
-    background: var(--white); 
-    /* place-items: center; */
+  background: var(--purple-500); 
+  color: var(--white);
 }
 
+#card-2 {
+  text-align: center;
+}
+
+.white { background: var(--white); }
+
+.white56 { 
+  background: var(--white); 
+}
 
 h1, h2 {
   font-weight: 500;
@@ -177,35 +127,41 @@ h2 .highlight {
   color: var(--purple-500);
   font-weight: bold;
 }
-.h1-social{
+
+.h1-social {
   font-size: 40px;
 }
-.text56{
+
+.text56 {
   font-size: 52px;
   margin-bottom: 10px;
 }
+
 .img-absolute {
-  position: relative  ;
+  position: relative;
 }
 
-.caja-img{
+.caja-img {
   overflow-x: hidden;
 }
+
 .grid-grow {
   display: grid;
-   grid-row: 2 / 14;
+  grid-row: 2 / 14;
 }
 
-.faster{
- padding-top: 10px;
+.faster {
+  padding-top: 10px;
   font-size: 18px;
 }
-.over{
+
+.over {
   font-weight: lighter;
-  opacity:0.8;
+  opacity: 0.8;
 }
+
 .grid-container1 {
- display: grid;
+  display: grid;
   grid-template-columns: repeat(2, 1.5fr);
   gap: 10px;
 }
